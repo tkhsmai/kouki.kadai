@@ -12,26 +12,24 @@ namespace koukinokadai
 {
     public partial class Form1 : Form
     {
-        public Form1()
-        {
-            // それぞれのリールを回すためのタイマー設定
-            Timer reel1Timer = new Timer();
-            Timer reel2Timer = new Timer();
-            Timer reel3Timer = new Timer();
+        // それぞれのリールを回すためのタイマー設定
+        Timer reel1Timer = new Timer();
+        Timer reel2Timer = new Timer();
+        Timer reel3Timer = new Timer();
 
-            // ランダムに絵文字を選ぶ
-            Random rand = new Random();
+        // ランダムに絵文字を選ぶ
+        Random rand = new Random();
 
-            // スロットの絵文字設定
-            string[] symbols = { "🤡", "🍒", "🍉", "🍌", "7️⃣" };
+        // スロットの絵文字設定
+        string[] symbols = { "🤡", "🍒", "🍉", "🍌", "7️⃣" };
 
-            // スコアを設定
-            int score = 0;
+        // スコアを設定
+        int score = 0;
 
-            // リールが止まったかどうか
-            bool reel1Stopped = false;
-            bool reel2Stopped = false;
-            bool reel3Stopped = false;
+        // リールが止まったかどうか
+        bool reel1Stopped = false;
+        bool reel2Stopped = false;
+        bool reel3Stopped = false;
 
         public Form1()
         {
@@ -162,6 +160,5 @@ namespace koukinokadai
         {
 
         }
-    }
     }
 }
