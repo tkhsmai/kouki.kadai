@@ -47,12 +47,13 @@
             this.button4.TabIndex = 10;
             this.button4.Text = "START";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // labelReel1
             // 
             this.labelReel1.BackColor = System.Drawing.Color.White;
             this.labelReel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelReel1.Font = new System.Drawing.Font("Segoe UI Emoji", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelReel1.Font = new System.Drawing.Font("MS UI Gothic", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.labelReel1.Location = new System.Drawing.Point(78, 132);
             this.labelReel1.Name = "labelReel1";
             this.labelReel1.Size = new System.Drawing.Size(150, 150);
@@ -63,7 +64,7 @@
             this.labelReel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelReel2.BackColor = System.Drawing.Color.White;
             this.labelReel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelReel2.Font = new System.Drawing.Font("Segoe UI Emoji", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelReel2.Font = new System.Drawing.Font("MS UI Gothic", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.labelReel2.Location = new System.Drawing.Point(263, 132);
             this.labelReel2.Name = "labelReel2";
             this.labelReel2.Size = new System.Drawing.Size(150, 150);
@@ -74,7 +75,7 @@
             // 
             this.labelReel3.BackColor = System.Drawing.Color.White;
             this.labelReel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelReel3.Font = new System.Drawing.Font("Segoe UI Emoji", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelReel3.Font = new System.Drawing.Font("MS UI Gothic", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.labelReel3.Location = new System.Drawing.Point(457, 132);
             this.labelReel3.Name = "labelReel3";
             this.labelReel3.Size = new System.Drawing.Size(150, 150);
@@ -90,6 +91,7 @@
             this.button1.TabIndex = 21;
             this.button1.Text = "Stop1";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnStop1_Click);
             // 
             // button2
             // 
@@ -100,6 +102,7 @@
             this.button2.TabIndex = 22;
             this.button2.Text = "Stop2";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.btnStop2_Click);
             // 
             // button3
             // 
@@ -110,6 +113,7 @@
             this.button3.TabIndex = 23;
             this.button3.Text = "Stop3";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.btnStop3_Click);
             // 
             // labelScore
             // 

@@ -21,7 +21,7 @@ namespace koukinokadai
         Random rand = new Random();
 
         // スロットの絵文字設定
-        string[] symbols = { "🤡", "🍒", "🍉", "🍌", "7️⃣" };
+        string[] symbols = { "★", "♠", "♣", "♦", "♥", "7" };
 
         // スコアを設定
         int score = 0;
@@ -44,6 +44,13 @@ namespace koukinokadai
             symbols[rand.Next(symbols.Length)];
             reel3Timer.Tick += (s, e) => labelReel3.Text =
             symbols[rand.Next(symbols.Length)];
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
+            // スコア初期化
+            labelScore.Text = "score: 0";
         }
 
         // スタートボタンを押したときの処理
@@ -80,10 +87,10 @@ namespace koukinokadai
         // リール2を止めるボタン
         private async void btnStop2_Click(object sender, EventArgs e)
         {
-            if (!reel1Stopped)   // まだ止まってないとき
+            if (!reel2Stopped)   // まだ止まってないとき
             {
-                await SlowStop(reel1Timer);
-                reel1Stopped = true;
+                await SlowStop(reel2Timer);
+                reel2Stopped = true;
                 CheckIfAllStopped();
             }
         }
@@ -91,10 +98,10 @@ namespace koukinokadai
         // リール３を止めるボタン
         private async void btnStop3_Click(object sender, EventArgs e)
         {
-            if (!reel1Stopped)   // まだ止まってないとき
+            if (!reel3Stopped)   // まだ止まってないとき
             {
-                await SlowStop(reel1Timer);
-                reel1Stopped = true;
+                await SlowStop(reel3Timer);
+                reel3Stopped = true;
                 CheckIfAllStopped();
             }
         }
@@ -132,10 +139,10 @@ namespace koukinokadai
             if (labelReel1.Text == labelReel2.Text && labelReel2.Text == labelReel3.Text)
             {
                 // 絵柄ごとにスコアを計算
-                if (labelReel1.Text == "🤡")
+                if (labelReel1.Text == "★")
                     score += 500;
 
-                else if (labelReel1.Text == "7️⃣")
+                else if (labelReel1.Text == "7️")
                     score += 300;
 
                 else
@@ -152,13 +159,6 @@ namespace koukinokadai
                 // ハズレメッセージ
                 MessageBox.Show("ハズレ...");
             }
-
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
