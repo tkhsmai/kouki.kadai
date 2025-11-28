@@ -57,9 +57,9 @@ namespace koukinokadai
         private void btnStart_Click(object sender, EventArgs e)
         {
             // リールの回転速度（interval）を初期設定
-            reel1Timer.Interval = 50;     // 50msごとに絵文字切り替え
-            reel2Timer.Interval = 50;
-            reel3Timer.Interval = 50;
+            reel1Timer.Interval = 70;     // 70msごとに絵文字切り替え
+            reel2Timer.Interval = 70;
+            reel3Timer.Interval = 70;
 
             // タイマーを開始したらリールが回る
             reel1Timer.Start();
@@ -72,56 +72,38 @@ namespace koukinokadai
         }
 
         // リール1を止めるボタン
-        // async = 時間かかるのを待たずにほかの処理続けられる
-        // await = この処理が終わるまで待つがUIは固まらない（asyncで使う）
-        private async void btnStop1_Click(object sender, EventArgs e)
+        private void btnStop1_Click(object sender, EventArgs e)
         {
             if (!reel1Stopped)   // まだ止まってないとき
             {
-                await SlowStop(reel1Timer);
+                reel1Timer.Stop();      // 即停止
                 reel1Stopped = true;
                 CheckIfAllStopped();
             }
         }
 
         // リール2を止めるボタン
-        private async void btnStop2_Click(object sender, EventArgs e)
+        private void btnStop2_Click(object sender, EventArgs e)
         {
             if (!reel2Stopped)   // まだ止まってないとき
             {
-                await SlowStop(reel2Timer);
+                reel2Timer.Stop();     // 即停止
                 reel2Stopped = true;
                 CheckIfAllStopped();
             }
         }
 
         // リール３を止めるボタン
-        private async void btnStop3_Click(object sender, EventArgs e)
+        private void btnStop3_Click(object sender, EventArgs e)
         {
             if (!reel3Stopped)   // まだ止まってないとき
             {
-                await SlowStop(reel3Timer);
+                reel3Timer.Stop();     //即停止
                 reel3Stopped = true;
                 CheckIfAllStopped();
             }
         }
 
-        // リールをだんだん遅くして止める
-        private async Task SlowStop(Timer reelTimer)
-        {
-            // 5回に分けてintervalを増やして回転を遅くする
-            for (int i = 0; i < 5; i++)
-            {
-                // intervalを50msずつ増やす
-                reelTimer.Interval += 50;
-
-                // 300ms待機（アニメーション）
-                await Task.Delay(300);
-
-            }
-            // 停止
-            reelTimer.Stop();
-        }
         // 全リールが止まったか確認
         private void CheckIfAllStopped()
         {

@@ -54,10 +54,11 @@
             this.labelReel1.BackColor = System.Drawing.Color.White;
             this.labelReel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelReel1.Font = new System.Drawing.Font("MS UI Gothic", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.labelReel1.Location = new System.Drawing.Point(78, 132);
+            this.labelReel1.Location = new System.Drawing.Point(66, 132);
             this.labelReel1.Name = "labelReel1";
             this.labelReel1.Size = new System.Drawing.Size(150, 150);
             this.labelReel1.TabIndex = 18;
+            this.labelReel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelReel2
             // 
@@ -85,7 +86,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(78, 308);
+            this.button1.Location = new System.Drawing.Point(66, 308);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(150, 40);
             this.button1.TabIndex = 21;
@@ -119,7 +120,7 @@
             // 
             this.labelScore.AutoSize = true;
             this.labelScore.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelScore.Location = new System.Drawing.Point(597, 384);
+            this.labelScore.Location = new System.Drawing.Point(561, 54);
             this.labelScore.Name = "labelScore";
             this.labelScore.Size = new System.Drawing.Size(115, 38);
             this.labelScore.TabIndex = 24;
