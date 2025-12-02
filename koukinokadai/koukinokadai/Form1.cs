@@ -57,9 +57,9 @@ namespace koukinokadai
         private void btnStart_Click(object sender, EventArgs e)
         {
             // リールの回転速度（interval）を初期設定
-            reel1Timer.Interval = 70;     // 70msごとに絵文字切り替え
-            reel2Timer.Interval = 70;
-            reel3Timer.Interval = 70;
+            reel1Timer.Interval = 100;     // 70msごとに絵文字切り替え
+            reel2Timer.Interval = 100;
+            reel3Timer.Interval = 100;
 
             // タイマーを開始したらリールが回る
             reel1Timer.Start();
