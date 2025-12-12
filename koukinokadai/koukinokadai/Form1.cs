@@ -123,10 +123,10 @@ namespace koukinokadai
             if (labelReel1.Text == labelReel2.Text && labelReel2.Text == labelReel3.Text)
             {
                 // 絵柄ごとにスコアを計算
-                if (labelReel1.Text == "★")
+                if (labelReel1.Text == "7")
                     score += 500;
 
-                else if (labelReel1.Text == "7️")
+                else if (labelReel1.Text == "★")
                     score += 300;
 
                 else
