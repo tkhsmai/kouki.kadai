@@ -27,17 +27,19 @@ namespace koukinokadai
         int score = 0;
 
         // リールが止まったかどうか
+        // true→止まってる  false→止まってない
         bool reel1Stopped = false;
         bool reel2Stopped = false;
         bool reel3Stopped = false;
 
         public Form1()
         {
-            InitializeComponent();  // フォームの初期化
+            InitializeComponent();  // 初期化
 
-            // タイマーのTickイベントに処理を追加
-            // リールが動いてる間,50msごとにランダムな絵文字を表示
-            // sは、sender eは、EventArgs
+            // Tick += →タイマーが鳴るたびに特定の処理を追加して実行
+            // リールが動いてる間,100msごとにランダムな絵文字を表示
+ 
+            // タイマーが変わるたびにsymbolsの中の絵文字をランダムに変更
             reel1Timer.Tick += (s, e) => labelReel1.Text =
             symbols[rand.Next(symbols.Length)];
             reel2Timer.Tick += (s, e) => labelReel2.Text =
@@ -57,7 +59,7 @@ namespace koukinokadai
         private void btnStart_Click(object sender, EventArgs e)
         {
             // リールの回転速度（interval）を初期設定
-            reel1Timer.Interval = 100;     // 70msごとに絵文字切り替え
+            reel1Timer.Interval = 100;     // 100msごとに絵文字切り替え
             reel2Timer.Interval = 100;
             reel3Timer.Interval = 100;
 
@@ -134,12 +136,22 @@ namespace koukinokadai
                 labelScore.Text = $"Score: {score}";
 
                 // 当たりメッセージ
-                MessageBox.Show("当たり！");
+                textBox.Text = ("大当たり！");
+            }
+            else if(labelReel1.Text == labelReel2.Text ||  labelReel2.Text == labelReel3.Text ||  labelReel1.Text == labelReel3.Text)
+            {
+                score += 50;
+
+                // スコア表示を更新
+                labelScore.Text = $"Score: {score}";
+
+                // 2つだけ同じ絵文字の時のメッセージ
+                textBox.Text = ("惜しい！");
             }
             else
             {
                 // ハズレメッセージ
-                MessageBox.Show("ハズレ...");
+                textBox.Text = ("ハズレ...");
             }
         }
     }

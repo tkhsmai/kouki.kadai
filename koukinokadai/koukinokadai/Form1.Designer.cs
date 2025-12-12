@@ -36,6 +36,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.labelScore = new System.Windows.Forms.Label();
+            this.textBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button4
@@ -126,17 +127,27 @@
             // 
             this.labelScore.AutoSize = true;
             this.labelScore.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelScore.Location = new System.Drawing.Point(561, 54);
+            this.labelScore.Location = new System.Drawing.Point(605, 382);
             this.labelScore.Name = "labelScore";
             this.labelScore.Size = new System.Drawing.Size(115, 38);
             this.labelScore.TabIndex = 24;
             this.labelScore.Text = "Score: 0";
+            // 
+            // textBox
+            // 
+            this.textBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox.Font = new System.Drawing.Font("ＭＳ ゴシック", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.textBox.Location = new System.Drawing.Point(477, 57);
+            this.textBox.Name = "textBox";
+            this.textBox.Size = new System.Drawing.Size(121, 30);
+            this.textBox.TabIndex = 25;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox);
             this.Controls.Add(this.labelScore);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -162,6 +173,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label labelScore;
+        private System.Windows.Forms.TextBox textBox;
     }
 }
 
