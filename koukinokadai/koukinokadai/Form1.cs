@@ -80,7 +80,7 @@ namespace koukinokadai
             {
                 reel1Timer.Stop();      // 即停止
                 reel1Stopped = true;
-                CheckIfAllStopped();
+                CheckIfAllStopped();    // 全体のtrueを確認→適切な次の処理へ
             }
         }
 
@@ -138,6 +138,7 @@ namespace koukinokadai
                 // 当たりメッセージ
                 textBox.Text = ("大当たり！");
             }
+            // 2つの絵文字が一致したとき
             else if(labelReel1.Text == labelReel2.Text ||  labelReel2.Text == labelReel3.Text ||  labelReel1.Text == labelReel3.Text)
             {
                 score += 50;
